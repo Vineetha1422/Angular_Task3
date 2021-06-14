@@ -1,0 +1,20 @@
+<table>
+    <tr style = "background-color: rgb(180, 173, 173);">
+        <th>Exam Id</th>
+        <th>Exam Type</th>
+        <th>Max Marks</th>
+        <th>Subject</th>
+        <th>Date and Time</th>
+        <th>View</th>
+    </tr>
+    <tr *ngFor="let exam of getAllExams()">
+        <td> {{exam.examId}} </td>
+        <td> {{exam.examType}} </td>
+        <td> {{exam.maxMarks}} </td>
+        <td> {{exam.subject}} </td>
+        <td> {{exam.examdatetime | date : 'dd-MM-yyyy HH:MM Z'}} </td>
+        <td> <button (click) = "viewExam(exam)">Share</button></td>  
+    </tr>
+</table>
+<br><br>
+

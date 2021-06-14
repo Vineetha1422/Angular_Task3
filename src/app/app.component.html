@@ -1,0 +1,16 @@
+
+<h2 style = "font-family: Verdana, Geneva, Tahoma, sans-serif;">Student Details</h2>
+<hr>
+<br>
+<br>
+<app-all-students></app-all-students>
+<br>
+<br>
+<button (click) = toggleDisplay()>View All Exam Records</button>
+<div *ngIf = "!doShow">
+    <hr>
+    <h2 style = "font-family: Verdana, Geneva, Tahoma, sans-serif;">Exam Details</h2>
+    <app-all-exams></app-all-exams>
+</div>
+<br>
+<br>

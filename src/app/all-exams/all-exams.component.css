@@ -1,0 +1,25 @@
+table{
+    width: 70%;
+    border: 1px solid lightslategrey;
+    border-collapse:collapse;
+    margin-left : auto;
+    margin-right : auto;
+  } 
+th, td {
+    border: 1px solid lightslategrey;
+    padding : 10px;
+    text-align : center;
+  }
+
+button{
+    padding : 10px;
+    background-color: rgb(180, 173, 173);
+    border : none;
+    border-radius: 3px;
+    
+}
+
+button:hover{
+    background-color : rgb(151, 137, 137);
+    cursor : pointer;
+}

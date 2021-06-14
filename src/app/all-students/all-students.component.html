@@ -1,0 +1,42 @@
+<table class="table table-bordered">
+
+    <tr style = "background-color: rgb(180, 173, 173);">
+        <th>Profile Picture</th>
+        <th>Student Id</th>
+        <th>Student Name</th>
+        <th>Class Id</th>
+        <th>Assigned Exam Id</th>
+        <th>Exam Status</th>
+        <th>Result</th>
+    </tr>
+    
+    <tr *ngFor="let student of getAllStudents()">
+
+        <td> <img src="{{student.imageName}}" />   </td> 
+        <td> {{student.studentId}} </td>
+        <td> {{student.studentName | uppercase}} </td>
+        <td> {{student.classId}} </td>
+        <td> {{student.assignedExamId}} </td>
+        <td>
+            <div *ngIf="student.examStatus == 'Attempted';then ifblock else elseblock">
+            </div>
+            <ng-template #ifblock>
+                <div style="color:rgb(26, 223, 26);">{{student.examStatus}}  </div>
+            </ng-template>
+            <ng-template #elseblock>
+                <div style = "color : red;">{{student.examStatus}}  </div>
+            </ng-template>
+        </td>
+        <!--<td> {{student.examStatus}} </td> -->
+        <td>
+            <div *ngIf="student.result == 'Pass';then if_block else else_block">
+            </div>
+            <ng-template #if_block>
+                <div style="color:rgb(26, 223, 26);">{{student.result}}  </div>
+            </ng-template>
+            <ng-template #else_block>
+                <div style = "color : red;">{{student.result}}  </div>
+            </ng-template>
+        </td>    
+    </tr>
+    </table>
